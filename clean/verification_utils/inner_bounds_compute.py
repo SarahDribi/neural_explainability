@@ -72,8 +72,8 @@ def compute_bounds_with_nap_around_input(model_path,input,epsilon, label, nap, u
 
     
 
-    domain_nap = torch.stack([lbs[0][0], ubs[0][0]], dim=-1)
-    return net, domain_nap.unsqueeze(0),lbs,ubs
+    
+    return net, domain_batch,lbs,ubs
 
    
 
@@ -104,7 +104,6 @@ def compute_bounds_around_input(model_path,input,epsilon, label, use_gpu):
         label,
         domain=input_bounds,
         use_ib=True,
-        num_classes=2,
         gpu=use_gpu, # I should add a variable called num_classes here that changes with data
     )
 
@@ -122,5 +121,5 @@ def compute_bounds_around_input(model_path,input,epsilon, label, use_gpu):
 
     
 
-    domain_nap = torch.stack([lbs[0][0], ubs[0][0]], dim=-1)
-    return net, domain_nap.unsqueeze(0),lbs,ubs
+
+    return net,domain_batch,lbs,ubs

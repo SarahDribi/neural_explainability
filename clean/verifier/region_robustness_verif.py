@@ -26,16 +26,6 @@ from clean.verification_utils.inner_bounds_compute import compute_bounds_around_
 
 def verify_robustness_around_input(model_path,input,epsilon, json_config, label, use_gpu,timeout):
     layers, domain,lbs,ubs = compute_bounds_around_input(model_path,input,epsilon, label, use_gpu)
-    """
-    print(lbs)
-    print(ubs)
-    I added this 
-    
-    """
-    print("test ,test")
-    print(f"these are lower bounds",lbs)
-    print(f"these are  upper bounds",ubs)
-    print("test ,test")
     bab=False
 
 
@@ -93,12 +83,12 @@ def verify_robustness_around_input(model_path,input,epsilon, json_config, label,
         # 
         # 
         # ############################################################ 
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         # what he changed is that he added cpu_domain[0] instead of cpu_domain
         print(f"The cpu_domain is {cpu_domain}")
         print(cpu_domain.shape)
         
-        anderson_mip_net.build_model_using_bounds(cpu_domain[0], (cpu_intermediate_lbs, cpu_intermediate_ubs),
+        anderson_mip_net.build_model_using_bounds(cpu_domain, (cpu_intermediate_lbs, cpu_intermediate_ubs),
                                                     n_threads=3)
         
         sat_status, global_lb, bab_nb_states = anderson_mip_net.solve_mip(timeout=timeout, insert_cuts=False)

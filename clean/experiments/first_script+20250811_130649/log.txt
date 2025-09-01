@@ -1,3 +1,0 @@
-[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
-[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/first_script+20250811_130649
-Loading ONNX model...

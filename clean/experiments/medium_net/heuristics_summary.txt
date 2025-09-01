@@ -1,7 +1,0 @@
-
-=== Comparative Summary ===
-[No results to display]
-[No results to display]
-[INFO] Explained image is  /home/goofy/stage/modified-oval-bab/clean/experiments/medium_net (image.pt, nap.json)
-It s label is 1 .
-Its nap specification holds at the max epsilon 0.0567303466796875ball around the input image.

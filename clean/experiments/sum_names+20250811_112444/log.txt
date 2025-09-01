@@ -1,6 +1,0 @@
-Script: sum_names
-Timestamp: 20250811_112444
-Mode: letters_only
-Name 1: sarah -> 5
-Name 2: aya -> 3
-Total: 8

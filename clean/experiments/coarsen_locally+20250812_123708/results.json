@@ -1,3 +1,0 @@
-{
-  "error": "AttributeError: 'AndersonLinearizedNetwork' object has no attribute 'interrupted_sat'"
-}

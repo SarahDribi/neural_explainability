@@ -1,0 +1,5 @@
+[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
+[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/coarsen_locally+20250812_135124
+[INFO] Selected dir: /clean/selected_images_explain_medium/L9+20250812_134657
+[INFO] Using device: cpu
+Loading ONNX model...

@@ -1,0 +1,99 @@
+
+=== Comparative Summary ===
+Heuristic            │ Diff │ Remaining % │ Timeouts │ Time (s)
+───────────────────────────────────────────────────────────────
+simple               │  106 │        5.36 │        0 │   395.44
+random               │  106 │        5.36 │        0 │   478.54
+preactivation_impact │  106 │        5.36 │        0 │   555.04
+
+===  Detailed Heuristics Summary ===
+
+
+
+=== Neural Activation Pattern Summary (simple) ===
+[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]
+
+Layer 1:
+ - Total neurons   : 80
+ - Active neurons  : 4 (5.0%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 76 (95.0%)
+ - Active indices  : [28, 50, 60, 68]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+
+Layer 2:
+ - Total neurons   : 32
+ - Active neurons  : 2 (6.2%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 30 (93.8%)
+ - Active indices  : [17, 21]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+
+=== Global Summary ===
+Total neurons   : 112
+Active neurons  : 6 (5.4%)
+Inactive neurons: 0 (0.0%)
+Abstracted      : 106 (94.6%)
+
+
+
+=== Neural Activation Pattern Summary (random) ===
+[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]
+
+Layer 1:
+ - Total neurons   : 80
+ - Active neurons  : 4 (5.0%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 76 (95.0%)
+ - Active indices  : [28, 50, 60, 68]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+
+Layer 2:
+ - Total neurons   : 32
+ - Active neurons  : 2 (6.2%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 30 (93.8%)
+ - Active indices  : [17, 21]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+
+=== Global Summary ===
+Total neurons   : 112
+Active neurons  : 6 (5.4%)
+Inactive neurons: 0 (0.0%)
+Abstracted      : 106 (94.6%)
+
+
+
+=== Neural Activation Pattern Summary (preactivation_impact) ===
+[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]
+
+Layer 1:
+ - Total neurons   : 80
+ - Active neurons  : 4 (5.0%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 76 (95.0%)
+ - Active indices  : [28, 50, 60, 68]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+
+Layer 2:
+ - Total neurons   : 32
+ - Active neurons  : 2 (6.2%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 30 (93.8%)
+ - Active indices  : [17, 21]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+
+=== Global Summary ===
+Total neurons   : 112
+Active neurons  : 6 (5.4%)
+Inactive neurons: 0 (0.0%)
+Abstracted      : 106 (94.6%)
+[INFO] Explained image is  /home/goofy/stage/modified-oval-bab/clean/experiments/first_preactivation3 (image.pt, nap.json)
+It s label is 5 .
+Its nap specification holds at the max epsilon 0.0702666015625ball around the input image.

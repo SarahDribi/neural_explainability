@@ -1,0 +1,19 @@
+Day 4 — Metrics that matter + aggregator
+Define a standard results schema (stable keys).
+
+Add script scripts/aggregate_results.sh (or .py) → summary.csv across runs.
+
+Compute at least:
+
+nap_size_before, nap_size_after, remaining_pct
+
+proved_standard (optional if available), proved_exclusive, timeouts
+
+time_fullnap_s, time_mincert_s (if you run both), or at least time_s
+
+epsilon_exclusive
+
+Add one plot script (optional): time vs remaining %.
+
+Acceptance criteria
+python scripts/aggregate.py experiments > summary.csv works; CSV has ≥ the fields above

@@ -1,0 +1,16 @@
+Metrics & Evaluation
+
+
+robust_inputs_found
+
+avg_eps_exclusive
+
+avg_coarsening_pct
+
+proof_success_rate
+
+avg_proof_time
+
+timeouts count
+
+This gives you curves to compare heuristics, coarsening strategies, or mode

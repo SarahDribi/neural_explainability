@@ -1,0 +1,14 @@
+{
+  "label": 1,
+  "epsilon": 0.024901855468749998,
+  "image_shape": [
+    784
+  ],
+  "image_dtype": "float32",
+  "nap_layers": 2,
+  "nap_sizes": [
+    10,
+    10
+  ],
+  "folder": "/home/goofy/stage/modified-oval-bab/clean/selected_images_explain_vcomp/L1+20250812_095334"
+}

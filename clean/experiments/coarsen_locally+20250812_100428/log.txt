@@ -1,0 +1,2122 @@
+[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
+[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/coarsen_locally+20250812_100428
+[INFO] Selected dir: clean/selected_images_explain_vcomp/L1+20250812_095334
+[INFO] Using device: cpu
+Loading ONNX model...
+[INFO] Using label=1, epsilon=0.024901855468749998
+[INFO] tensor shape=(784,), dtype=torch.float32, device=cpu
+[INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.006460666656494141
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0018215179443359375
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0020172595977783203
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.002179384231567383
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0025908946990966797
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.001432180404663086
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+/home/goofy/stage/modified-oval-bab/plnn/anderson_linear_approximation.py:222: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(c_b, device=device).unsqueeze(0)
+Coarsening NAP:   0%|          | 0/20 [00:00<?, ?neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.004059791564941406
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0017709732055664062
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0020880699157714844
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.002130746841430664
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0035424232482910156
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.001074075698852539
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,0) coarsened successfully.
+Coarsening NAP:   5%|5         | 1/20 [00:00<00:03,  5.21neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0019507408142089844
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0023572444915771484
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.003117799758911133
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0025908946990966797
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0013370513916015625
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0010166168212890625
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,1) coarsened successfully.
+Coarsening NAP:  10%|#         | 2/20 [00:00<00:03,  5.13neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.005355358123779297
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0016169548034667969
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0018551349639892578
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0029489994049072266
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0026586055755615234
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0028159618377685547
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,2) coarsened successfully.
+Coarsening NAP:  15%|#5        | 3/20 [00:00<00:03,  5.04neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0018508434295654297
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.00057220458984375
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0006220340728759766
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0007610321044921875
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0010423660278320312
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008475780487060547
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,3) coarsened successfully.
+Coarsening NAP:  20%|##        | 4/20 [00:00<00:03,  4.77neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.010254859924316406
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.023678064346313477
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0009677410125732422
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0009744167327880859
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0008180141448974609
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0012204647064208984
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,4) coarsened successfully.
+Coarsening NAP:  25%|##5       | 5/20 [00:01<00:03,  4.50neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0016045570373535156
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005860328674316406
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.001241445541381836
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0006208419799804688
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0008940696716308594
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0007853507995605469
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,5) coarsened successfully.
+Coarsening NAP:  30%|###       | 6/20 [00:01<00:03,  4.58neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0012125968933105469
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.001619100570678711
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0037467479705810547
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.001300811767578125
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0013816356658935547
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008440017700195312
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,6) coarsened successfully.
+Coarsening NAP:  35%|###5      | 7/20 [00:01<00:02,  4.70neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0017576217651367188
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005395412445068359
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0005450248718261719
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0006577968597412109
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0006740093231201172
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0007488727569580078
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,7) coarsened successfully.
+Coarsening NAP:  40%|####      | 8/20 [00:01<00:02,  4.81neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0016427040100097656
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0010387897491455078
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0008745193481445312
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0010082721710205078
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.00136566162109375
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0022232532501220703
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,8) coarsened successfully.
+Coarsening NAP:  45%|####5     | 9/20 [00:01<00:02,  4.31neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0008821487426757812
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0014405250549316406
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.001071929931640625
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0008699893951416016
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0012004375457763672
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0011546611785888672
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (0,9) coarsened successfully.
+Coarsening NAP:  50%|#####     | 10/20 [00:02<00:02,  4.06neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0008502006530761719
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005230903625488281
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0005464553833007812
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0007002353668212891
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0007262229919433594
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0007648468017578125
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Coarsening NAP:  55%|#####5    | 11/20 [00:02<00:01,  4.78neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0028786659240722656
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.002575397491455078
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0024938583374023438
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.002794981002807617
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0016524791717529297
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.001435995101928711
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,1) coarsened successfully.
+Coarsening NAP:  60%|######    | 12/20 [00:02<00:01,  4.29neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.001062154769897461
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005688667297363281
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0005574226379394531
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0006611347198486328
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0006954669952392578
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0007736682891845703
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,2) coarsened successfully.
+Coarsening NAP:  65%|######5   | 13/20 [00:02<00:01,  4.23neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.00632929801940918
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.002718687057495117
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.002108335494995117
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.002504110336303711
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.002590656280517578
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0021398067474365234
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,3) coarsened successfully.
+Coarsening NAP:  70%|#######   | 14/20 [00:03<00:01,  3.96neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.003757476806640625
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0020885467529296875
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0021800994873046875
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0009026527404785156
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0008113384246826172
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0011827945709228516
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,4) coarsened successfully.
+Coarsening NAP:  75%|#######5  | 15/20 [00:03<00:01,  3.92neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0014252662658691406
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0006437301635742188
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.00063323974609375
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0007038116455078125
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0007963180541992188
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0010554790496826172
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Coarsening NAP:  80%|########  | 16/20 [00:03<00:00,  4.19neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.004614591598510742
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0025594234466552734
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0018489360809326172
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0007207393646240234
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0006885528564453125
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008871555328369141
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,6) coarsened successfully.
+Coarsening NAP:  85%|########5 | 17/20 [00:03<00:00,  3.99neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0010428428649902344
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005800724029541016
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0005552768707275391
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0006120204925537109
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0007429122924804688
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0007643699645996094
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Coarsening NAP:  90%|######### | 18/20 [00:04<00:00,  4.12neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0009744167327880859
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005466938018798828
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.000682830810546875
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0006339550018310547
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0006957054138183594
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008275508880615234
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,8) coarsened successfully.
+Coarsening NAP:  95%|#########5| 19/20 [00:04<00:00,  3.87neuron/s][INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0009179115295410156
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0017881393432617188
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0030519962310791016
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0016617774963378906
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0008182525634765625
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0011925697326660156
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Warning: environment still referenced so free is deferred (Continue to use WLS)
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[Coarsening] Neuron (1,9) coarsened successfully.
+Coarsening NAP: 100%|##########| 20/20 [00:04<00:00,  3.09neuron/s]Coarsening NAP: 100%|##########| 20/20 [00:04<00:00,  4.07neuron/s]
+[INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0009083747863769531
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005421638488769531
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.000614166259765625
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.000629425048828125
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0006940364837646484
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008432865142822266
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+[INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.0010802745819091797
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0005660057067871094
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0006422996520996094
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0007188320159912109
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0007035732269287109
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008783340454101562
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 10, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-6.6393, max=5.4329 | UB min=-3.1373, max=8.7757
+  Layer 2: LB min=-6.5862, max=5.2590 | UB min=-1.3061, max=10.8629
+  Layer 3: LB min=-14.0311, max=19.9157 | UB min=-4.0999, max=35.9390
+  Layer 4: LB min=-9.9958, max=24.1029 | UB min=5.2035, max=35.6224
+  Layer 5: LB min=-12.6331, max=24.5278 | UB min=8.7639, max=39.9187
+  Layer 6: LB min=-1.8840, max=19.9157 | UB min=23.7423, max=35.5275
+  Layer 7: LB min=-9.3898, max=-9.3898 | UB min=10.6073, max=10.6073
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0
+Running Nb states visited: 0.0

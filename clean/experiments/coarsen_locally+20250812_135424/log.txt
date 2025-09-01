@@ -1,0 +1,90 @@
+[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
+[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/coarsen_locally+20250812_135424
+[INFO] Selected dir: clean/selected_images_explain_medium/L9+20250812_134657
+[INFO] Using device: cpu
+Loading ONNX model...
+[INFO] Using label=9, epsilon=0.04142584228515625
+[INFO] tensor shape=(784,), dtype=torch.float32, device=cpu
+[INFO] Loading ONNX model from tools/mnist-10x2.onnx
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 3: 0.017438888549804688
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 5: 0.0027534961700439453
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 7: 0.0012977123260498047
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 9: 0.0008459091186523438
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 11: 0.0007822513580322266
+<class 'plnn.proxlp_solver.propagation.Propagation'> Time used for layer 13: 0.0008530616760253906
+
+[DEBUG] Layer-wise bound shapes BEFORE NAP:
+  Layer 0: LB shape = torch.Size([1, 784]), UB shape = torch.Size([1, 784])
+  Layer 1: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 2: LB shape = torch.Size([1, 10]), UB shape = torch.Size([1, 10])
+  Layer 3: LB shape = torch.Size([1, 9]), UB shape = torch.Size([1, 9])
+  Layer 4: LB shape = torch.Size([1, 5]), UB shape = torch.Size([1, 5])
+  Layer 5: LB shape = torch.Size([1, 3]), UB shape = torch.Size([1, 3])
+  Layer 6: LB shape = torch.Size([1, 2]), UB shape = torch.Size([1, 2])
+  Layer 7: LB shape = torch.Size([1, 1]), UB shape = torch.Size([1, 1])
+[DEBUG] Total bound layers: 8 (includes input and output)
+[DEBUG] Intermidiate Layer 1: NAP length = 64, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 1 th relu layer 
+    [Inactive neuron in Nap] Layer 1, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 1 th relu layer 
+    [ACTive neuron in Nap] Layer 1, Neuron 9
+[DEBUG] Intermidiate Layer 2: NAP length = 20, Bounds neurons = 10
+[DEBUG] Now working on the 0 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 0
+[DEBUG] Now working on the 1 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 1
+[DEBUG] Now working on the 2 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 2
+[DEBUG] Now working on the 3 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 3
+[DEBUG] Now working on the 4 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 4
+[DEBUG] Now working on the 5 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 5
+[DEBUG] Now working on the 6 th neuron of 2 th relu layer 
+    [Inactive neuron in Nap] Layer 2, Neuron 6
+[DEBUG] Now working on the 7 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 7
+[DEBUG] Now working on the 8 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 8
+[DEBUG] Now working on the 9 th neuron of 2 th relu layer 
+    [ACTive neuron in Nap] Layer 2, Neuron 9
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+NAP update only for inner bounds, skipping because this is either an  output or/an extra verif layer.
+
+[DEBUG] Layer-wise bounds AFTER applying NAP:
+  Layer 0: LB min=-1.0000, max=-1.0000 | UB min=1.0000, max=1.0000
+  Layer 1: LB min=-2.7467, max=3.2353 | UB min=0.0000, max=9.0955
+  Layer 2: LB min=0.0000, max=4.1394 | UB min=0.0000, max=11.1550
+  Layer 3: LB min=-33.2496, max=26.7905 | UB min=2.7008, max=59.7869
+  Layer 4: LB min=-17.3120, max=61.6196 | UB min=7.1471, max=92.0279
+  Layer 5: LB min=-19.6317, max=60.8701 | UB min=17.5401, max=100.3827
+  Layer 6: LB min=-8.5616, max=14.1206 | UB min=28.7287, max=35.9506
+  Layer 7: LB min=-30.8566, max=-30.8566 | UB min=14.6483, max=14.6483
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2684372
+Academic license 2684372 - for non-commercial use only - registered to sa___@bordeaux-inp.fr
+/home/goofy/stage/modified-oval-bab/plnn/anderson_linear_approximation.py:222: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(c_b, device=device).unsqueeze(0)
+> /home/goofy/stage/modified-oval-bab/plnn/anderson_linear_approximation.py(260)solve_mip()
+-> return (False, None, nb_visited_states)
+(Pdb) 

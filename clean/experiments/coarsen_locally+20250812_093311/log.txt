@@ -1,0 +1,6 @@
+[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
+[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/coarsen_locally+20250812_093311
+[INFO] Selected dir: clean/selected_images_explain_vcomp_mnist/L1+20250812_090240
+Loading ONNX model...
+[INFO] Using label=1, epsilon=0.024901855468749998
+[INFO] Loading ONNX model from tools/mnist-10x2.onnx

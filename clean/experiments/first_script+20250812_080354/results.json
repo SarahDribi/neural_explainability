@@ -1,0 +1,118 @@
+{
+  "label": 1,
+  "epsilon": 0.024901855468749998,
+  "stochastic_diff": 15,
+  "stochastic_remaining_percent": 25.0,
+  "stochastic_successful_iterations": 6,
+  "coarsened_nap": [
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1
+    ]
+  ],
+  "original_nap": [
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  ],
+  "coarsened_results": [
+    {
+      "heuristic": "simple",
+      "coarsened_nap": [
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "timeout_flags": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "diff": 17,
+      "remaining_percent": 15.0
+    }
+  ]
+}

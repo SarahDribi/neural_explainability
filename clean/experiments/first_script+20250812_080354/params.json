@@ -1,0 +1,9 @@
+{
+  "model": "tools/mnist-10x2.onnx",
+  "json": "tools/bab_configs/mnistfc_vnncomp21.json",
+  "gpu": false,
+  "label": 1,
+  "timeout": 700,
+  "theta": 0.2,
+  "iterations": 100
+}

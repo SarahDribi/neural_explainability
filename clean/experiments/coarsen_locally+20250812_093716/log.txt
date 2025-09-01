@@ -1,0 +1,7 @@
+[INFO] Project root: /home/goofy/stage/modified-oval-bab/clean
+[INFO] Experiments dir: /home/goofy/stage/modified-oval-bab/clean/experiments/coarsen_locally+20250812_093716
+[INFO] Selected dir: clean/selected_images_explain_vcomp_mnist/L1+20250812_090240
+[INFO] Using device: cpu
+Loading ONNX model...
+[INFO] Using label=1, epsilon=0.024901855468749998
+[INFO] image.npy shape=(784,), dtype=float32

@@ -1,0 +1,39 @@
+
+=== Comparative Summary ===
+Heuristic │ Diff │ Remaining % │ Timeouts │ Time (s)
+────────────────────────────────────────────────────
+simple    │   17 │       15.00 │        0 │     4.19
+
+===  Detailed Heuristics Summary ===
+
+
+
+=== Neural Activation Pattern Summary (simple) ===
+[[-1, -1, -1, 0, -1, -1, -1, -1, 0, -1], [0, -1, -1, -1, -1, -1, -1, -1, -1, -1]]
+
+Layer 1:
+ - Total neurons   : 10
+ - Active neurons  : 2 (20.0%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 8 (80.0%)
+ - Active indices  : [3, 8]
+ - Inactive indices: []
+ - Abstract indices: [0, 1, 2, 4, 5, 6, 7, 9]
+
+Layer 2:
+ - Total neurons   : 10
+ - Active neurons  : 1 (10.0%)
+ - Inactive neurons: 0 (0.0%)
+ - Abstracted      : 9 (90.0%)
+ - Active indices  : [0]
+ - Inactive indices: []
+ - Abstract indices: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+=== Global Summary ===
+Total neurons   : 20
+Active neurons  : 3 (15.0%)
+Inactive neurons: 0 (0.0%)
+Abstracted      : 17 (85.0%)
+[INFO] Explained image is  /home/goofy/stage/modified-oval-bab/clean/experiments/mnist6 (image.pt, nap.json)
+It s label is 1 .
+Its nap specification holds at the max epsilon 0.0242921142578125ball around the input image.

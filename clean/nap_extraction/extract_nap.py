@@ -11,7 +11,7 @@ import random
 import json
 import copy
 import numpy as np
-from clean.dataset.dataset_utils import get_label_input
+from clean.dataset.utils import get_label_input
 
 
 # OVAL-BaB path

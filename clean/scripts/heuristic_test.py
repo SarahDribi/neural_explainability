@@ -150,6 +150,7 @@ def print_comparative_table(rows):
 def build_parser():
     p = argparse.ArgumentParser(description="Run heuristic tests on NAP coarsening.")
     p.add_argument('--model', type=str, required=True, help='Path to the ONNX model.')
+    p.add_argument('--num_classes', type=int, default=10, help='Number of classes for model classification.')
     p.add_argument('--heuristics', type=str, nargs='+', default=DEFAULT_HEURISTICS,
                    help='List of heuristics to test (default: simple random).')
     # Name of the experiment folder
@@ -183,9 +184,8 @@ def main():
 
     # Create verifier 
     try:
-        verifier = Verifier(model_path, args.json, args.gpu, args.timeout)
-    except TypeError:
-        verifier = Verifier(model=model_path, json=args.json, gpu=args.gpu, timeout=args.timeout)
+        
+        verifier = Verifier(model_path=model_path, json_config =args.json, use_gpu=args.gpu, timeout=args.timeout,num_classes=args.num_classes)
     except Exception as e:
         print(f"[ERROR] Failed to initialize Verifier: {e}", file=sys.stderr)
         sys.exit(1)

@@ -14,11 +14,13 @@ from clean.verifier.region_robustness_verif import verify_robustness_around_inpu
 # make it more clear
 
 class Verifier:
-    def __init__(self, model_path, json_config, use_gpu, timeout):
+    def __init__(self, model_path, json_config, use_gpu, timeout,num_classes):
         self.model_path = model_path
+
         self.json_config = json_config
         self.timeout = timeout
         self.use_gpu = use_gpu
+        self.num_classes=num_classes
         
 
     def is_verified_nap(self, nap,input, label, epsilon):
@@ -31,7 +33,8 @@ class Verifier:
             nap=nap,
             label=label,
             use_gpu=False,
-            timeout=self.timeout
+            timeout=self.timeout,
+            num_classes=self.num_classes
             
     
         )
@@ -45,12 +48,14 @@ class Verifier:
             nap=nap,
             label=label,
             use_gpu=False,
-            timeout=12 # small timeout for fast verification
+            timeout=12,
+            # small timeout for fast verification
+            num_classes=self.num_classes
         )
         return result, timed_out  # return both result and timeout status
 
     def is_verified_region(self,input,label,epsilon):
-        result=verify_robustness_around_input(model_path=self.model_path,input=input,epsilon=epsilon,json_config=self.json_config, label=label, use_gpu=False,timeout=self.timeout)
+        result=verify_robustness_around_input(model_path=self.model_path,input=input,epsilon=epsilon,json_config=self.json_config, label=label, use_gpu=False,timeout=self.timeout,num_classes=self.num_classes)
         return  result
 
 

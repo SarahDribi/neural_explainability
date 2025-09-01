@@ -24,8 +24,8 @@ from clean.verification_utils.inner_bounds_compute import compute_bounds_around_
 
 
 
-def verify_robustness_around_input(model_path,input,epsilon, json_config, label, use_gpu,timeout):
-    layers, domain,lbs,ubs = compute_bounds_around_input(model_path,input,epsilon, label, use_gpu)
+def verify_robustness_around_input(model_path,input,epsilon, json_config, label, use_gpu,timeout,num_classes=10):
+    layers, domain,lbs,ubs = compute_bounds_around_input(model_path,input,epsilon, label, use_gpu,num_classes=num_classes)
     bab=False
 
 

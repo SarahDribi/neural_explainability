@@ -25,10 +25,10 @@ import time
 
 
 # I am going to add a boolean flag to see if the decision was made ealier or not
-def verify_nap_property_around_input(model_path,input,epsilon, json_config, nap, label, use_gpu,timeout):
+def verify_nap_property_around_input(model_path,input,epsilon, json_config, nap, label, use_gpu,timeout,num_classes=10):
     
     
-    layers, domain,lbs,ubs = compute_bounds_with_nap_around_input(model_path,input,epsilon, label, nap, use_gpu)
+    layers, domain,lbs,ubs = compute_bounds_with_nap_around_input(model_path,input,epsilon, label, nap, use_gpu,num_classes=num_classes)
     bab=False
 
 

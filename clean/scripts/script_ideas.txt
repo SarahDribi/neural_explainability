@@ -1,7 +1,0 @@
-#today I have to come up with ideas for my scripts 
-# today I have to come up with ideas for my scripts
-
-# what to compare , what to show how to use loggers 
-# how to evaluate 
-# the different comparisons 
-# a report 

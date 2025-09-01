@@ -1,0 +1,29 @@
+first clean the code 
+train another model (more big )
+rerun the same script 
+undertand how branch and bound choses the neurons
+write the heuristic where we chose the the derivative of  the activation logit with respect to neuron s preactivation value
+think about a way to ground it 
+train it on tabular data (chose the dataset and see how it s going )
+clean the code 
+write and clean unit tests 
+add the coarsening outcomes as metrics
+read the deep learning pdf I sent myself 
+learn more about optimization 
+
+# think abou classes to be written cleanely 
+# how can I incorporate other papers and actually write a mini paper
+# neatly rebrand all 
+# Save the pictures like alessandro said   (urgent)
+# exploit the lime framework  why should i trust you ? 
+# how can it be parrallazied
+# can i change the branch and bound constraints ?
+# I need to make sure the advanced metrics run well 
+
+# How can I GRound the explanations ?
+# entrainer un petit modèle mnist et verifier qu il est verification friendly
+# en comparant ses rayons de robustness par rapport au petit network 
+
+
+
+

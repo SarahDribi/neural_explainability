@@ -1,0 +1,1 @@
+ python3 -m clean.scripts.heuristic_test --model  models/mnist-10x2.onnx --label 1  --json configs/bab_config.json --heuristics simple descending random preactivation_impact  --exp-name first_preactivation1
